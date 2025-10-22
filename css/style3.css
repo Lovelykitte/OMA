@@ -1,0 +1,606 @@
+.oma-logo {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  padding: 8px 0;
+}
+
+.oma-logo-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 14px 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border-bottom: 1px solid #eee;
+  height: 60px;
+}
+
+:root{
+  --color-1: #1D1D1B;
+  --text-color: #f0f0f0;
+  --accent-color: #ffffff;
+  /* Variables para controlar tamaño de la imagen del popup */
+  --popup-foto-width: 320px; /* CAMBIAR AQUI para ajustar ancho de las fotos en popup */
+  --popup-foto-height: 420px; /* CAMBIAR AQUI para ajustar alto de las fotos en popup */
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+   font-family: "JetBrains Mono", monospace;
+}
+nav{
+  position: fixed;
+  top: 60px; /* dejar igual al alto de .oma-logo-bar para evitar solapamiento */
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: var(--color-1);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+.links-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+    justify-content: center;
+}
+nav a{
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 12px;
+}
+nav a:hover{
+  background-color: var(--accent-color);
+  color: #000;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+
+}
+
+nav svg{
+  fill: var(--text-color);
+}
+#sidebar-active{
+  display: none;
+}
+.open-sidebar-button, .close-sidebar-button{
+  display: none;
+}
+@media(max-width: 450px){
+  .links-container{
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 300px;
+
+    background-color: var(--color-1);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.75s ease-out;
+  }
+  nav a{
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+  }
+  .open-sidebar-button, .close-sidebar-button{
+    padding: 20px;
+    display: block;
+  }
+  #sidebar-active:checked ~ .links-container{
+    right: 0;
+  }
+  #sidebar-active:checked ~ #overlay{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+}
+
+/* ==== GRID GENERAL ==== */
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  max-width: 1300px;
+  margin: 60px auto;
+  justify-content: center;
+  /* Espacio superior para no quedar pegado al navbar (+ margen extra para respiración) */
+  margin-top: 180px;
+  /* espacio inferior para que las cartas no se solapen al footer */
+  margin-bottom: 120px;
+}
+
+.equipo-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 38px 28px 0px 28px;
+  transition: box-shadow 0.23s, transform 0.23s;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+  min-width: 246px;
+  min-height: 180px;
+}
+
+/* ==== CIRCULO ANIMADO ==== */
+.equipo-img-circulo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: #e73292;
+  border: 5px solid #727272; /* borde rosado claro */
+  box-shadow: 0 2px 10px rgba(231,50,146,0.10);
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  margin-bottom: 26px;
+  position: relative;
+  overflow: hidden;
+  transition: width 0.32s cubic-bezier(.28,1.22,.39,.98), 
+              height 0.32s cubic-bezier(.28,1.22,.39,.98),
+              border 0.23s, background 0.18s;
+}
+.equipo-card:hover .equipo-img-circulo,
+.equipo-card:focus .equipo-img-circulo,
+.equipo-card.equipo-hover .equipo-img-circulo {
+  width: 190px;
+  height: 190px;
+border: 5px solid #727272;  background: #e73292;
+}
+
+/* ==== FOTO PERSONA PNG ==== */
+.equipo-foto {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom;
+  filter: contrast(1.1);
+}
+
+/* ==== TEXTO ==== */
+.equipo-nombre {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 23px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 3px;
+  margin-top: 0;
+  transition: font-weight 0.23s;
+}
+.equipo-rol {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  color: #888;
+  text-align: center;
+  margin-bottom: 18px;
+  display: block;
+  transition: font-weight 0.23s;
+}
+
+/* ==== REDES ==== */
+.equipo-social {
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+  margin-top: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(35px);
+  transition: opacity 0.18s, transform 0.19s;
+}
+.equipo-card:hover .equipo-social,
+.equipo-card:focus .equipo-social,
+.equipo-card.equipo-hover .equipo-social {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition-delay: 0.13s;
+}
+.equipo-social a,
+.popup-social a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background: #1D1D1B;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.16s, color 0.16s;
+  position: relative;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Control limpio de tamaño para SVGs inline: usar width + height:auto para mantener proporción */
+.equipo-social a svg,
+.popup-social a svg {
+  width: 20px;       /* tamaño controlado por CSS */
+  height: auto;      /* evita distorsión (mochos) */
+  display: block;
+  transition: stroke 0.18s, fill 0.18s, color 0.18s;
+  stroke: currentColor; /* para iconos stroke-based */
+  fill: none;           /* la mayoría de mis iconos usan stroke; si quieres filled icons, cambia a fill:currentColor */
+  vector-effect: non-scaling-stroke; /* mantiene grosor de trazo a escala */
+}
+
+/* Si por alguna razón quedan <img> en markup, ocultarlas en tarjetas para evitar mezcla */
+.equipo-social a img {
+  display: none;
+}
+
+/* hover styling (sigue tu esquema) */
+.equipo-social a:hover,
+.equipo-social a:focus,
+.popup-social a:hover,
+.popup-social a:focus {
+  background: #e73292;
+  color: #fff; /* svg/stroke/currentColor se volverá blanco */
+}
+
+.equipo-social a:hover svg,
+.equipo-social a:focus svg,
+.popup-social a:hover svg,
+.popup-social a:focus svg {
+  stroke: #fff;
+  fill: #fff;
+}
+
+/* ==== HOVER CARD ==== */
+.equipo-card:hover,
+.equipo-card:focus,
+.equipo-card.equipo-hover {
+  transform: translateY(-20px) scale(0.97);
+  box-shadow: 0 6px 32px rgba(231,50,146,0.13);
+}
+.equipo-card:hover .equipo-nombre,
+.equipo-card:focus .equipo-nombre,
+.equipo-card.equipo-hover .equipo-nombre,
+.equipo-card:hover .equipo-rol,
+.equipo-card:focus .equipo-rol,
+.equipo-card.equipo-hover .equipo-rol {
+  font-weight: 900;
+}
+.equipo-card:active {
+  outline: none;
+}
+
+/* ==== POPUP ==== */
+.equipo-popup-overlay {
+  display: none;
+  position: fixed;
+  z-index: 10001;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(50,50,50,0.48);
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.24s;
+}
+.equipo-popup-overlay.activo {
+  display: flex;
+  animation: popup-in 0.48s cubic-bezier(.28,1.22,.39,.98);
+}
+@keyframes popup-in {
+  0% { opacity: 0; transform: translateY(100px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+@keyframes popup-out {
+  0% { opacity: 1; transform: translateY(0);}
+  100% { opacity: 0; transform: translateY(100px);}
+}
+
+.equipo-popup-card {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.18);
+  padding: 48px 48px 48px 60px;
+  max-width: 900px;
+  min-width: 700px;
+  min-height: 400px;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+  animation: popup-in 0.49s cubic-bezier(.28,1.22,.39,.98);
+}
+
+.popup-img {
+  flex: 0 0 330px;
+  margin-right: 48px;
+  display: flex;
+  align-items: center; /* centrar verticalmente la imagen en el contenedor */
+  justify-content: center; /* centrar horizontalmente */
+}
+.popup-foto {
+  /* Usamos variables para que sea fácil cambiar el tamaño desde :root */
+  width: var(--popup-foto-width);
+  height: var(--popup-foto-height);
+  object-fit: contain; /* evita recorte, manteniendo toda la imagen */
+  object-position: center; /* centrar la imagen dentro del marco */
+  /* escala de grises por defecto en el popup + ligero contraste */
+  filter: grayscale(1) contrast(1.05);
+  display: block;
+}
+
+/* Distinción visual: popup social iconos */
+.popup-social a {
+  color: #232323;
+  background: #fff;
+}
+.popup-social a:hover {
+  background: #e73292;
+  color: #fff;
+}
+.popup-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  align-items: center;
+}
+
+.popup-social a {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  background: #1D1D1B;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.16s, color 0.16s, transform 0.12s;
+  color: #ffffff;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+/* control limpio de tamaño para SVGs inline: mantener proporción evitando "mochos" */
+.popup-social a svg {
+  width: 20px;
+  height: auto;           /* evita distorsión vertical */
+  display: block;
+  transition: stroke 0.18s, fill 0.18s, color 0.18s, transform 0.12s;
+  stroke: currentColor;   /* iconos basados en stroke seguirán color del enlace */
+  fill: none;             /* si prefieres íconos rellenos usa fill: currentColor */
+  vector-effect: non-scaling-stroke; /* mantiene el grosor del trazo al escalar */
+}
+
+/* fallback: ocultar imágenes si quedaran por error */
+.popup-social a img { display: none; }
+
+/* hover / focus */
+.popup-social a:hover,
+.popup-social a:focus {
+  background: #e73292;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.popup-social a:hover svg,
+.popup-social a:focus svg {
+  stroke: #fff;
+  fill: #fff;
+}
+
+/* botón cerrar (simple) */
+.popup-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: #111;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 6px;
+  line-height: 1;
+}
+
+.footer {
+  background: #1D1D1B;
+  color: #fff;
+  padding: 48px 0 32px 0;;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1.8fr;
+  gap: 64px;
+  max-width: 1120px;
+  margin: 0 auto;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.footer-logo {
+
+  width: 60px;
+  height: 21px;
+  object-fit: contain;
+  margin-bottom: 0px;
+}
+
+.footer-desc {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  margin: 0 0 12px 0;
+  max-width: 420px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 18px;
+  margin-top: 6px;
+}
+
+.footer-social img {
+  background: none;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px; 
+}
+
+.footer-links h4 {
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #fff;
+  letter-spacing: 0.06em;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  font-size: 10px;
+  font-weight: 200;
+  color: #fff;
+  margin-bottom: 10px;
+  font-family: inherit;
+  letter-spacing: 0.06em;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid #81807b;
+  margin: 38px auto 24px auto;
+  max-width: 1120px;
+  opacity: 0.7;
+}
+
+.footer-menu {
+  max-width: 1120px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 0.06em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 auto; 
+}
+
+.footer-menu a {
+  color: #A6A6A6;
+  text-decoration: none;
+  margin: 0 0px;
+  font-size: 12px;
+  transition: text-decoration 0.2s;
+
+}
+
+.footer-menu a:hover {
+  text-decoration: underline;
+}
+
+.footer-menu span {
+  color: #afafab;
+  margin:0  3.5px;
+}
+
+.footer-bottom {
+  max-width: 1120px;
+  margin: 16px auto 0 auto;
+  font-size: 10px;
+  color: #afafab;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.footer-bottom-links {
+  display: inline-block;
+  margin-top: 0px;
+}
+
+.footer-bottom-links a {
+  color: #81807b;
+  text-decoration: underline;
+  font-size: 10px;
+  margin-right: 10px;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .footer-links {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+  }
+  .footer-menu, .footer-bottom {
+    max-width: 94vw;
+  }
+  /* reducir el espacio superior/inferior en pantallas pequeñas */
+  .equipo-grid {
+    margin-top: 140px;
+    margin-bottom: 80px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Reducir tamaño del popup foto en pantallas pequeñas */
+  .popup-img { flex: 0 0 240px; margin-right: 18px; }
+  .popup-foto { width: 220px; height: 300px; }
+}
