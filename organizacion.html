@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMA</title>
+    <link rel="stylesheet" href="css/style3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section class="oma-logo-bar">
+  <a href="index.html" class="oma-logo-link" aria-label="Ir al inicio">
+    <img class="oma-logo" src="img/Union (1).png" alt="OMA logo">
+  </a>
+</section>
+    <header>
+    <nav>
+    <input type="checkbox" id="sidebar-active">
+    <label for="sidebar-active" class="open-sidebar-button">
+    <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="http://www.w3.org/2000/svg" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+    </label>
+    <label id="overlay" for="sidebar-active"></label>
+    <div class="links-container">
+    <label for="sidebar-active" class="close-sidebar-button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="http://www.w3.org/2000/svg" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+    </label>
+
+        <!-- NOT IN TUTORIAL: The <a> tags are linked to the subpages -->
+        <a class="home-link" href="sobre-nosotros.html">Sobre nosotros</a> 
+        <a href="organizacion.html">Organizacion</a> 
+        <a href="investigaciones.html">Investigaciones</a>
+        <a href="oma-en.medios.html">OMA en medios</a>
+    </div>
+    </nav>
+    </header>
+
+<section class="equipo-grid">
+  <!-- CARD 1 -->
+  <div class="equipo-card" tabindex="0" data-person="martin">
+    <div class="equipo-img-circulo">
+      <img class="equipo-foto" src="Gallery/Mesa de trabajo 2.png" alt="Martín Mendoza" />
+    </div>
+    <h3 class="equipo-nombre">MARCELA TORRES</h3>
+    <span class="equipo-rol">DISEÑADORA GRÁFICA</span>
+    <div class="equipo-social">
+      <a href="#" class="icono-linkedin" aria-label="LinkedIn">
+        <!-- Inline simple LinkedIn-style icon (strokes use currentColor) -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect x="2" y="2" width="20" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M8 11v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <circle cx="8" cy="8.5" r="0.9" fill="currentColor"/>
+          <path d="M12.5 11.2c.9 0 1.6.5 1.6 1.6v3.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+        </svg>
+      </a>
+      <a href="#" class="icono-instagram" aria-label="Instagram">
+        <!-- Inline Instagram-style icon -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="#" class="icono-mail" aria-label="Mail">
+        <!-- Inline Mail/envelope icon -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M4.5 7.5l7 5 7-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- CARD 2 -->
+  <div class="equipo-card" tabindex="0" data-person="alix">
+    <div class="equipo-img-circulo">
+      <img class="equipo-foto" src="Gallery/Mesa de trabajo 3.png" alt="Alix Castro" />
+    </div>
+    <h3 class="equipo-nombre">MARTÍN MENDOZA</h3>
+    <span class="equipo-rol">CO-INVESTIGADOR</span>
+    <div class="equipo-social">
+      <a href="#" class="icono-linkedin" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect x="2" y="2" width="20" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="L8 11v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <circle cx="8" cy="8.5" r="0.9" fill="currentColor"/>
+          <path d="M12.5 11.2c.9 0 1.6.5 1.6 1.6v3.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+        </svg>
+      </a>
+      <a href="#" class="icono-instagram" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="#" class="icono-mail" aria-label="Mail">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M4.5 7.5l7 5 7-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- CARD 3 -->
+  <div class="equipo-card" tabindex="0" data-person="ana">
+    <div class="equipo-img-circulo">
+      <img class="equipo-foto" src="Gallery/Mesa de trabajo 4.png" alt="Ana Beltrán" />
+    </div>
+    <h3 class="equipo-nombre">ALIX CASTRO</h3>
+    <span class="equipo-rol">CO-INVESTIGADORA</span>
+    <div class="equipo-social">
+      <a href="#" class="icono-linkedin" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect x="2" y="2" width="20" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M8 11v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <circle cx="8" cy="8.5" r="0.9" fill="currentColor"/>
+          <path d="M12.5 11.2c.9 0 1.6.5 1.6 1.6v3.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+        </svg>
+      </a>
+      <a href="#" class="icono-instagram" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="#" class="icono-mail" aria-label="Mail">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M4.5 7.5l7 5 7-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- CARD 4 -->
+  <div class="equipo-card" tabindex="0" data-person="diego">
+    <div class="equipo-img-circulo">
+      <img class="equipo-foto" src="Gallery/Mesa de trabajo 5.png" alt="Diego Villa" />
+    </div>
+    <h3 class="equipo-nombre">ANA BELTRÁN</h3>
+    <span class="equipo-rol">CO-INVESTIGADORA</span>
+    <div class="equipo-social">
+      <a href="#" class="icono-linkedin" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect x="2" y="2" width="20" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M8 11v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <circle cx="8" cy="8.5" r="0.9" fill="currentColor"/>
+          <path d="M12.5 11.2c.9 0 1.6.5 1.6 1.6v3.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+        </svg>
+      </a>
+      <a href="#" class="icono-instagram" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="#" class="icono-mail" aria-label="Mail">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M4.5 7.5l7 5 7-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+    <div class="equipo-card" tabindex="0" data-person="marcela">
+    <div class="equipo-img-circulo">
+      <img class="equipo-foto" src="Gallery/Mesa de trabajo 1.png" alt="Marcela Torres" />
+    </div>
+    <h3 class="equipo-nombre">DIEGO VILLA</h3>
+    <span class="equipo-rol">DISEÑADOR GRÁFICO</span>
+    <div class="equipo-social">
+      <a href="#" class="icono-linkedin" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect x="2" y="2" width="20" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M8 11v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <circle cx="8" cy="8.5" r="0.9" fill="currentColor"/>
+          <path d="M12.5 11.2c.9 0 1.6.5 1.6 1.6v3.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+        </svg>
+      </a>
+      <a href="#" class="icono-instagram" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="#" class="icono-mail" aria-label="Mail">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M4.5 7.5l7 5 7-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- POPUP -->
+<div class="equipo-popup-overlay" tabindex="-1">
+  <div class="equipo-popup-card">
+    <button class="popup-close" aria-label="Cerrar popup">&times;</button>
+
+    <div class="popup-img">
+      <!-- foto grande (se puede reemplazar dinámicamente desde JS) -->
+      <img class="popup-foto" src="Gallery/Mesa de trabajo 3.png" alt="Foto persona">
+    </div>
+
+    <div class="popup-info">
+      <h3 class="popup-nombre">NOMBRE APELLIDO</h3>
+      <span class="popup-rol">ROL / CARGO</span>
+      <p class="popup-desc">Breve biografía o descripción. Aquí va el texto que se muestra en el popup.</p>
+
+      <div class="popup-social">
+        <a href="#" aria-label="LinkedIn" class="icono-linkedin">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <rect x="2" y="2" width="20" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M8 11v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="8" cy="8.5" r="0.9" fill="currentColor"/>
+            <path d="M12.5 11.2c.9 0 1.6.5 1.6 1.6v3.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+          </svg>
+        </a>
+
+        <a href="#" aria-label="Mail" class="icono-mail">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M4.5 7.5l7 5 7-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+      <footer class="footer">
+    <div class="footer-grid">
+      <!-- Columna Logo y descripción -->
+      <div class="footer-brand">
+        <!-- Placeholder del logo (puedes reemplazar src y tamaño luego) -->
+        <img src="img/Union.svg" alt="OMA Logo" class="footer-logo" width="130" height="37">
+        <p class="footer-desc">
+          Donde se hace realidad el mañana. Es la fuente esencial de información e ideas que dan sentido a un mundo en constante cambio. Inspiramos para conectar, cuestionar y transformar.
+        </p>
+        <div class="footer-social">
+          <!-- Placeholder de iconos, puedes reemplazar SRC y tamaño luego -->
+          <img src="img/instagram.svg" alt="Instagram" width="32" height="32">
+          <img src="img/facebook.svg" alt="Facebook" width="32" height="32">
+          <img src="img/tiktok.svg" alt="TikTok" width="32" height="32">
+          <img src="img/x.svg" alt="X" width="32" height="32">
+          <img src="/img/linkeding.svg" alt="LinkedIn" width="32" height="32">
+        </div>
+      </div>
+      <!-- Columna Categorías -->
+      <div class="footer-links">
+        <div>
+          <h4>Categorías</h4>
+          <ul>
+            <li>Inteligencia artificial</li>
+            <li>Noticias locales</li>
+            <li>Vallenato</li>
+            <li>Tecnología</li>
+            <li>Cultura</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Otros</h4>
+          <ul>
+            <li>Acerca de OMA</li>
+            <li>Creadores de OMA</li>
+            <li>Cultura de OMA</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Municipios</h4>
+          <ul>
+            <li>Valledupar</li>
+            <li>Barrancas</li>
+            <li>San Juan</li>
+            <li>Manaure</li>
+            <li>Atanques</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <!-- Segunda fila: enlaces -->
+    <div class="footer-menu">
+      <span>|</span>
+      <a href="#">RSS</a>
+      <span>|</span>
+      <a href="#">Aviso de privacidad</a>
+      <span>|</span>
+      <a href="#">Convenio de usuario</a>
+      <span>|</span>
+      <a href="#">Política de Afiliación</a>
+      <span>|</span>
+      <a href="#">Política de Afiliación</a>
+      <span>|</span>
+      <a href="#">Prensa</a>
+      <span>|</span>
+      <a href="#">Media Kit</a>
+      <span>|</span>
+      <a href="#">CONFIGURACIÓN DE COOKIES</a>
+      <span>|</span>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Condé Nast México S.A de C.V. Todos los derechos reservados.</span>
+      <span class="footer-bottom-links">
+        <a href="#">Convenio del usuario</a>
+        <a href="#">Aviso de Privacidad</a>
+        <a href="#">Términos y condiciones</a>
+      </span>
+    </div>
+  </footer>
+<script src="main2.js"></script>
+</body>
+</html>
