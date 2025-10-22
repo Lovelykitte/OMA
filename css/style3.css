@@ -359,6 +359,9 @@ border: 5px solid #727272;  background: #e73292;
   filter: grayscale(1) contrast(1.05);
   display: block;
 }
+.popup-desc{
+  font-size: 12px;
+}
 
 /* Distinción visual: popup social iconos */
 .popup-social a {
@@ -603,4 +606,5 @@ border: 5px solid #727272;  background: #e73292;
   /* Reducir tamaño del popup foto en pantallas pequeñas */
   .popup-img { flex: 0 0 240px; margin-right: 18px; }
   .popup-foto { width: 220px; height: 300px; }
+
 }
