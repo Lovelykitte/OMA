@@ -39,9 +39,10 @@ function fillPopup(cardOrPerson) {
   const data = {
     martin: {
       img: 'Gallery/Marcela-Photoroom.png',
-      nombre: 'MARCELA TORRES',
-      rol: 'DISEÑADORA GRÁFICA',
-      desc: `Diseñadora gráfica con amplia experiencia en diseño editorial, branding y diseño web. Especialista en diseño de experiencia de usuario y comunicación visual.<br><br>Actualmente se desempeña como docente del programa de Diseño Gráfico de la Fundación Universitaria del Área Andina, sede Valledupar, donde contribuye al desarrollo de futuros profesionales del diseño y la comunicación visual.`
+      nombre: 'MARCELA QUINTERO',
+      rol: 'INVESTIGADORA PRINCIPAL',
+      desc: `Comunicador Social y Periodista, especialista en Pedagogía Ambiental y magíster en Pedagogía Ambiental para el Desarrollo Sostenible. Actualmente se desempeña como docente del programa de Comunicación Social de la Fundación Universitaria del Área Andina, sede Valledupar.<br><br>
+      Su trayectoria integra la formación académica con la investigación aplicada, enfocándose en la promoción de prácticas sostenibles y en el fortalecimiento de los procesos comunicativos vinculados a los medios de comunicación, el periodismo y el desarrollo sostenible.`
     },
     alix: {
       img: 'Gallery/Martin-Photoroom.png',
@@ -104,4 +105,5 @@ function fillPopup(cardOrPerson) {
   popup.querySelector('.popup-nombre').textContent = info.nombre;
   popup.querySelector('.popup-rol').textContent = info.rol;
   popup.querySelector('.popup-desc').innerHTML = info.desc;
+
 }
