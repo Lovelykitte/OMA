@@ -18,6 +18,9 @@
   background: transparent;
   cursor: pointer;
 }
+p{
+  font-zise:16px;
+}
 
 .oma-logo-bar {
   position: fixed;
@@ -385,4 +388,5 @@ nav svg{
   .footer-menu, .footer-bottom {
     max-width: 94vw;
   }
+
 }
