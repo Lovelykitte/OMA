@@ -360,12 +360,12 @@ border: 5px solid #EEACD3;  background: #e73292;
   display: block;
 }
 
-.popup-nombre {
-  gap: 20px
+.popup-rol {
+  margin-top:20px  
 }
 
 .popup-desc{
-  font-size: 80px;
+  font-size: 12px;
 }
 
 /* Distinción visual: popup social iconos */
@@ -613,6 +613,7 @@ border: 5px solid #EEACD3;  background: #e73292;
   .popup-foto { width: 220px; height: 300px; }
 
 }
+
 
 
 
