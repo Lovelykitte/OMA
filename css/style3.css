@@ -360,10 +360,6 @@ border: 5px solid #EEACD3;  background: #e73292;
   display: block;
 }
 
-.popup-rol {
-  margin-top:20px  
-}
-
 .popup-desc{
   font-size: 12px;
 }
@@ -613,6 +609,7 @@ border: 5px solid #EEACD3;  background: #e73292;
   .popup-foto { width: 220px; height: 300px; }
 
 }
+
 
 
 
