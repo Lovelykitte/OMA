@@ -13,6 +13,7 @@
 }
 .popup-rol{
   gap:64px;
+  padding:64px;
 }
 .oma-logo-bar {
   position: fixed;
@@ -615,6 +616,7 @@ border: 5px solid #EEACD3;  background: #e73292;
   .popup-foto { width: 220px; height: 300px; }
 
 }
+
 
 
 
