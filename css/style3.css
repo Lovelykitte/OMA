@@ -362,6 +362,10 @@ border: 5px solid #EEACD3;  background: #e73292;
 
 .popup-desc{
   font-size: 12px;
+  
+}
+.popup-nombre{
+  margin-top:64px;
 }
 
 /* Distinción visual: popup social iconos */
@@ -609,6 +613,7 @@ border: 5px solid #EEACD3;  background: #e73292;
   .popup-foto { width: 220px; height: 300px; }
 
 }
+
 
 
 
