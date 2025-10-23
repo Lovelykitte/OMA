@@ -359,6 +359,11 @@ border: 5px solid #EEACD3;  background: #e73292;
   filter: grayscale(1) contrast(1.05);
   display: block;
 }
+
+.popup-nombre {
+  gap: 20px
+}
+
 .popup-desc{
   font-size: 12px;
 }
@@ -608,4 +613,5 @@ border: 5px solid #EEACD3;  background: #e73292;
   .popup-foto { width: 220px; height: 300px; }
 
 }
+
 
