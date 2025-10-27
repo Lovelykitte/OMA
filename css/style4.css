@@ -28,45 +28,56 @@
   text-align: center;
 }
 .investigacion-band__title {
-  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  letter-spacing: 2px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: 0;
+  text-transform: none;
 }
 .investigacion-band__title--large {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  letter-spacing: 1.5px;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: 0;
+  line-height: 1.3;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .investigacion-band__subtitle {
-  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
-  font-weight: 200;
-  font-size: 16px;
-  opacity: 0.95;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 300;
+  font-size: 15px;
+  opacity: 1;
   margin: 0 auto;
-  max-width: 760px;
-  line-height: 1.3;
+  max-width: 800px;
+  line-height: 1.6;
+  text-align: center;
 }
 .investigacion-content {
-  max-width: 1200px; /* más ancho */
+  max-width: 1000px;
   margin: 0 auto;
-  color: #111;
-  font-size: 27px;
-  line-height: 1.6;
-  letter-spacing: 0.6px;
+  color: #1a1a1a;
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 0;
+  text-align: justify;
 }
 .investigacion-content p {
-  margin: 0 0 18px 0;
+  margin: 0 0 24px 0;
+  font-weight: 300;
 }
 .investigacion-findings {
-  margin: 14px 0 18px 26px;
-  text-align: left;
+  margin: 20px 0 24px 32px;
+  text-align: justify;
 }
 .investigacion-findings li {
-  margin: 10px 0;
-  font-size: 27px;
+  margin: 12px 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+  padding-left: 8px;
 }
 @media (min-width: 1100px) {
   .investigacion-band__inner, .investigacion-content { max-width: 1600px; }
@@ -252,24 +263,27 @@ nav svg {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 3vw;
-  margin-right: 80px; /* nuevo margen derecho */
+  padding-left: 5vw;
+  margin-right: 40px;
 }
 
 .animacion-grid__title {
-  font-size: 48px;
-  font-weight: 900;
-  margin-bottom: 36px;
-  line-height: 1.05;
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
 }
 
 .animacion-grid__desc {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 400;
-  letter-spacing: 0.02em;
+  line-height: 1.6;
+  letter-spacing: 0;
   margin-bottom: 0;
-  white-space: pre-line;
-  max-width: 700px;
+  color: #333;
+  max-width: 580px;
 }
 
 .animacion-grid__right {
