@@ -12,8 +12,12 @@
   padding: 8px 0;
 }
 .popup-rol{
-  gap:64px;
-  padding:64px;
+  display: block;
+  text-align: left;
+  color: #888;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  margin-bottom: 20px;
 }
 .oma-logo-bar {
   position: fixed;
@@ -135,7 +139,7 @@ nav svg{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 40px;
-  max-width: 1300px;
+  max-width: 1500px;
   margin: 60px auto;
   justify-content: center;
   /* Espacio superior para no quedar pegado al navbar (+ margen extra para respiración) */
@@ -151,7 +155,7 @@ nav svg{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 38px 28px 0px 28px;
+  padding: 28px 28px 24px 28px;
   transition: box-shadow 0.23s, transform 0.23s;
   cursor: pointer;
   position: relative;
@@ -202,8 +206,8 @@ border: 5px solid #EEACD3;  background: #e73292;
   letter-spacing: 2px;
   text-align: center;
   font-weight: 400;
-  margin-bottom: 3px;
-  margin-top: 0;
+  margin-bottom: 8px;
+  margin-top: 16px;
   transition: font-weight 0.23s;
 }
 .equipo-rol {
@@ -212,7 +216,7 @@ border: 5px solid #EEACD3;  background: #e73292;
   letter-spacing: 1.4px;
   color: #888;
   text-align: center;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   display: block;
   transition: font-weight 0.23s;
 }
@@ -220,12 +224,12 @@ border: 5px solid #EEACD3;  background: #e73292;
 /* ==== REDES ==== */
 .equipo-social {
   display: flex;
-  gap: 22px;
+  gap: 16px;
   justify-content: center;
   margin-top: 0;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(35px);
+  transform: translateY(20px);
   transition: opacity 0.18s, transform 0.19s;
 }
 .equipo-card:hover .equipo-social,
@@ -369,6 +373,7 @@ border: 5px solid #EEACD3;  background: #e73292;
 }
 .popup-nombre{
   margin-top:64px;
+  margin-bottom: 16px;
 }
 
 /* Distinción visual: popup social iconos */
