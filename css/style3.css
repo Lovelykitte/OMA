@@ -178,7 +178,7 @@ nav svg{
   position: relative;
   overflow: visible;
   min-width: 320px;
-  min-height: 500px;
+  min-height: 316px;
 }
 
 /* ==== CIRCULO ANIMADO ==== */
@@ -959,6 +959,7 @@ border: 5px solid #EEACD3;  background: #e73292;
     max-height: 280px;
   }
 }
+
 
 
 
