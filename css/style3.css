@@ -244,7 +244,7 @@ border: 5px solid #EEACD3;  background: #e73292;
   gap: 16px;
   justify-content: center;
   position: absolute;
-  bottom: 2px;
+  bottom: 42px;
   left: 0;
   right: 0;
   opacity: 0;
@@ -959,6 +959,7 @@ border: 5px solid #EEACD3;  background: #e73292;
     max-height: 280px;
   }
 }
+
 
 
 
