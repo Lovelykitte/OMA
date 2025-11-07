@@ -251,7 +251,7 @@ nav svg {
   grid-template-columns: 1.1fr 1.1fr;
   gap: 160px;
   max-width: 1540px;
-  margin: 0 auto;
+  margin: 160px auto 0 auto; /* Añadido margen superior */
   min-height: 700px;
   padding: 30px 0 30px 0;
   font-family: 'JetBrains Mono', monospace;
@@ -289,6 +289,7 @@ nav svg {
 .animacion-grid__right {
   display: flex;
   height: 450px;
+  margin-top: 50px;
   gap: 18px;
   align-items: stretch;
   padding-right: 3vw; /* add lateral padding to avoid touching viewport edge */
@@ -538,7 +539,187 @@ nav svg {
   }
 }
 
-/* Paneles específicos - Imágenes de fondo */
+/* Modificar los media queries existentes y agregar nuevos estilos */
+@media (max-width: 500px) {
+  .animacion-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 20px;
+    height: auto;
+    margin-top: 100px;
+  }
+
+  .animacion-grid__left {
+    padding: 0 20px;
+    margin: 0;
+    order: 2; /* Mover el texto debajo del carrusel */
+  }
+
+  .animacion-grid__title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .animacion-grid__desc {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .animacion-grid__right {
+    height: 300px;
+    padding: 0;
+    order: 1; /* Mover el carrusel arriba */
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Estilos para el carrusel */
+  .animacion-panel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    min-height: unset;
+    flex: unset;
+  }
+
+  .animacion-panel.active {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .panel-title {
+    font-size: 28px;
+    text-align: center;
+    transform: none !important;
+    position: static !important;
+    margin: 0 !important;
+  }
+
+  .panel-btn {
+    opacity: 1;
+    pointer-events: auto;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Indicadores del carrusel */
+  .carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 2;
+  }
+
+  .carousel-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+  }
+
+  .carousel-indicator.active {
+    background: #fff;
+  }
+
+    .footer {
+    padding: 40px 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-desc {
+    text-align: center;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .footer-social {
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .footer-links h4 {
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+
+  .footer-links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .footer-links li {
+    margin-bottom: 12px;
+    font-size: 12px;
+  }
+
+  .footer-divider {
+    margin: 32px auto;
+    width: 80%;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .footer-menu a {
+    display: block;
+    text-align: center;
+    margin: 8px 0;
+  }
+
+  .footer-menu span {
+    display: none;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .footer-bottom-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .footer-bottom-links a {
+    margin: 0;
+  }
+
+}
+
 .panel-1 .animacion-panel__media {
   background-image: url('https://images.unsplash.com/photo-1586473219010-2ffc57b0d282?w=400&h=600&fit=crop');
 }
@@ -747,3 +928,81 @@ box-sizing: border-box;
   padding-right: 32px;
   box-sizing: border-box;
 }
+
+@media (max-width: 500px) {
+  .animacion-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 20px;
+    height: auto;
+    margin-top: 100px;
+  }
+
+  .animacion-grid__left {
+    padding: 0 20px;
+    margin: 0;
+    order: 2; /* Mover el texto debajo del carrusel */
+  }
+
+  .animacion-grid__title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .animacion-grid__desc {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .animacion-grid__right {
+    height: 300px;
+    padding: 0;
+    order: 1; /* Mover el carrusel arriba */
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Estilos para el carrusel */
+  .animacion-panel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    min-height: unset;
+    flex: unset;
+  }
+
+  .animacion-panel.active {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .panel-title {
+    font-size: 28px;
+    text-align: center;
+    transform: none !important;
+    position: static !important;
+    margin: 0 !important;
+  }
+
+  .panel-btn {
+    display: none; /* Ocultar el botón en móviles */
+  }
+
+  .animacion-panel {
+    cursor: pointer; /* Asegurar que toda el área sea clickeable */
+  }
+
+  .animacion-panel.active {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Hacer que todo el panel sea clickeable */
+  .animacion-panel__media {
+    cursor: pointer;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
