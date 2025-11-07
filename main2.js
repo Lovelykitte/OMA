@@ -43,7 +43,7 @@ function fillPopup(cardOrPerson) {
       rol: 'INVESTIGADORA PRINCIPAL',
       linkedin: 'https://www.linkedin.com/in/marcela-quintero/',
       email: 'marcela.quintero@example.com',
-      desc: `Comunicadora Social y Periodista, especialista en Gerencia de la Comunicación para el Desarrollo Social de la Universidad Autónoma del Caribe y maestrante en Innovación de la Fundación Universitaria del Área Andina. Consultora en comunicación corporativa y estratégica, así como en proyectos vinculados a las industrias creativas y culturales. Actualmente es directora del programa de Comunicación Social de Areandina, sede Valledupar, desde donde lidera procesos académicos, investigativos y de gestión, orientados al fortalecimiento de la formación en comunicación con impacto social, cultural y regional.`
+      desc: `Comunicadora Social y Periodista, especialista en Pedagogía Ambiental y magíster en Pedagogía Ambiental para el Desarrollo Sostenible. Actualmente se desempeña como docente del programa de Comunicación Social de la Fundación Universitaria del Área Andina, sede Valledupar.<br><br>Su trayectoria integra la formación académica con la investigación aplicada, enfocándose en la promoción de prácticas sostenibles y en el fortalecimiento de los procesos comunicativos vinculados a los medios de comunicación, el periodismo y el desarrollo sostenible.`
     },
     alix: {
       img: 'Gallery/Martin-Photoroom.png',
@@ -51,7 +51,7 @@ function fillPopup(cardOrPerson) {
       rol: 'CO-INVESTIGADOR',
       linkedin: 'https://www.linkedin.com/in/martin-mendoza/',
       email: 'martin.mendoza@example.com',
-      desc: `Comunicador Social y Periodista, especialista en Pedagogía Ambiental y magíster en Pedagogía Ambiental para el Desarrollo Sostenible. Actualmente se desempeña como docente del programa de Comunicación Social de la Fundación Universitaria del Área Andina, sede Valledupar.<br><br><br><br>Su trayectoria integra la formación académica con la investigación aplicada, enfocándose en la promoción de prácticas sostenibles y en el fortalecimiento de los procesos comunicativos vinculados a los medios de comunicación, el periodismo y el desarrollo sostenible.`
+      desc: `Comunicador Social y Periodista, especialista en Pedagogía Ambiental y magíster en Pedagogía Ambiental para el Desarrollo Sostenible. Actualmente se desempeña como docente del programa de Comunicación Social de la Fundación Universitaria del Área Andina, sede Valledupar.<br><br>Su trayectoria integra la formación académica con la investigación aplicada, enfocándose en la promoción de prácticas sostenibles y en el fortalecimiento de los procesos comunicativos vinculados a los medios de comunicación, el periodismo y el desarrollo sostenible.`
     },
     ana: {
       img: 'Gallery/Alix-Photoroom.png',
@@ -59,7 +59,7 @@ function fillPopup(cardOrPerson) {
       rol: 'CO-INVESTIGADORA',
       linkedin: 'https://www.linkedin.com/in/alix-castro/',
       email: 'alix.castro@example.com',
-      desc: 'Comunicadora Social y Periodista, especialista en Gerencia de la Comunicación para el Desarrollo Social de la Universidad Autónoma del Caribe y maestrante en Innovación de la Fundación Universitaria del Área Andina.<br><br>Consultora en comunicación corporativa y estratégica, así como en proyectos vinculados a las industrias creativas y culturales.Actualmente es directora del programa de Comunicación Social de Areandina, sede Valledupar, desde donde lidera procesos académicos, investigativos y de gestión, orientados al fortalecimiento de la formación en comunicación con impacto social, cultural y regional.'
+      desc: 'Comunicadora Social y Periodista, especialista en Gerencia de la Comunicación para el Desarrollo Social de la Universidad Autónoma del Caribe y maestrante en Innovación de la Fundación Universitaria del Área Andina.<br><br>Consultora en comunicación corporativa y estratégica, así como en proyectos vinculados a las industrias creativas y culturales. Actualmente es directora del programa de Comunicación Social de Areandina, sede Valledupar, desde donde lidera procesos académicos, investigativos y de gestión, orientados al fortalecimiento de la formación en comunicación con impacto social, cultural y regional.'
     },
     diego: {
       img: 'Gallery/Ana-Photoroom.png',
@@ -67,7 +67,7 @@ function fillPopup(cardOrPerson) {
       rol: 'CO-INVESTIGADORA',
       linkedin: 'https://www.linkedin.com/in/ana-beltran/',
       email: 'ana.beltran@example.com',
-      desc: 'Comunicadora Social y Periodista. Magíster en Comunicación Estratégica por la Universidad Sergio Arboleda y Magíster en Neuromarketing Aplicado por la Universidad Politécnica de Valencia, España. Diplomada en Transformación Digital.<br><br>Cuenta con amplia experiencia en la articulación con el sector empresarial y en la gestión de convenios con entidades públicas y privadas. Se ha desempeñado como consultora en comunicación estratégica y responsabilidad social empresarial. Docente del programa de Comunicación Social Virtual de la Fundación Universitaria del Área Andina.'
+      desc: 'Comunicadora Social y Periodista. Magíster en Comunicación Estratégica por la Universidad Sergio Arboleda y magíster en Neuromarketing Aplicado por la Universidad Politécnica de Valencia, España. Diplomada en Transformación Digital.<br><br>Cuenta con amplia experiencia en la articulación con el sector empresarial y en la gestión de convenios con entidades públicas y privadas. Se ha desempeñado como consultora en comunicación estratégica y responsabilidad social empresarial. Docente del programa de Comunicación Social Virtual de la Fundación Universitaria del Área Andina.'
     },
     marcela: {
       img: 'Gallery/Diego-Photoroom.png',
@@ -134,6 +134,7 @@ function fillPopup(cardOrPerson) {
     mailLink.href = '#';
   }
 }
+
 
 
 
