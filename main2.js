@@ -77,7 +77,7 @@ function fillPopup(cardOrPerson) {
       rol: 'DISEÑADOR GRÁFICO',
       linkedin: 'https://www.linkedin.com/in/diego-villa/',
       email: 'diego.villa@example.com',
-      desc: 'Diseñador gráfico con amplia experiencia en diseño editorial, branding y diseño web. Especialista en diseño de experiencia de usuario y comunicación visual. Actualmente se desempeña como docente del programa de Diseño Gráfico de la Fundación Universitaria del Área Andina, sede Valledupar, donde contribuye al desarrollo de futuros profesionales del diseño y la comunicación visual.
+      desc: 'Diseñador gráfico con amplia experiencia en diseño editorial, branding y diseño web. Especialista en diseño de experiencia de usuario y comunicación visual. Actualmente se desempeña como docente del programa de Diseño Gráfico de la Fundación Universitaria del Área Andina, sede Valledupar, donde contribuye al desarrollo de futuros profesionales del diseño y la comunicación visual.'
 
 '
     }
@@ -137,5 +137,6 @@ function fillPopup(cardOrPerson) {
     mailLink.href = '#';
   }
 }
+
 
 
