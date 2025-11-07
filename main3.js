@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     var contentMap = {
                         pilon: {
                             title: 'Del papel a la pantalla: el desafío de El Pilón',
-                            desc: 'El Pilón, con más de tres décadas de trayectoria, se ha consolidado como referente periodístico regional y mantiene la confianza de sus lectores. Sin embargo, en el entorno digital se enfrenta críticas por la repetitividad de sus contenidos y la falta de innovación.'
+                            desc: 'El Pilón, con más de tres décadas de trayectoria, se ha consolidado como referente periodístico regional y mantiene la confianza de sus lectores. Sin embargo, en el entorno digital se enfrenta a críticas por la repetitividad de sus contenidos y la falta de innovación.'
                         },
                         radioguatapuri: {
                             title: 'Sintonizando audiencias: Radio Guatapurí en la era digital',
@@ -106,4 +106,5 @@ document.querySelectorAll('.animacion-panel').forEach(panel => {
     this.querySelector('.panel-title').classList.remove('vertical');
     this.querySelector('.panel-title').classList.add('horizontal');
   });
+
 });
