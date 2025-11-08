@@ -39,7 +39,7 @@ function fillPopup(cardOrPerson) {
   const data = {
     martin: {
       img: 'Gallery/Marcela-Photoroom.png',
-      nombre: 'Marcela Quintero Jiménez',
+      nombre: 'MARCELA QUINTERO JIMÉNEZ',
       rol: 'Lider de proyecto',
       linkedin: 'https://www.linkedin.com/in/marcela-quintero/',
       email: 'marcela.quintero@example.com',
@@ -134,6 +134,7 @@ function fillPopup(cardOrPerson) {
     mailLink.href = '#';
   }
 }
+
 
 
 
