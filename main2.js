@@ -39,11 +39,11 @@ function fillPopup(cardOrPerson) {
   const data = {
     martin: {
       img: 'Gallery/Marcela-Photoroom.png',
-      nombre: 'MARCELA QUINTERO',
-      rol: 'INVESTIGADORA PRINCIPAL',
+      nombre: 'Marcela Quintero Jiménez',
+      rol: 'Lider de proyecto',
       linkedin: 'https://www.linkedin.com/in/marcela-quintero/',
       email: 'marcela.quintero@example.com',
-      desc: `Comunicadora Social y Periodista, especialista en Pedagogía Ambiental y magíster en Pedagogía Ambiental para el Desarrollo Sostenible. Actualmente se desempeña como docente del programa de Comunicación Social de la Fundación Universitaria del Área Andina, sede Valledupar.<br><br>Su trayectoria integra la formación académica con la investigación aplicada, enfocándose en la promoción de prácticas sostenibles y en el fortalecimiento de los procesos comunicativos vinculados a los medios de comunicación, el periodismo y el desarrollo sostenible.`
+      desc: `Comunicadora Social y Periodista, especialista en Auditorías de Sistemas, magíster en Comunicación, Desarrollo y Cambio Social y estudiante de la Especialización en Docencia y Pedagogía. Docente del programa de Comunicación Social de la Fundación Universitaria del Área Andina, sede Valledupar, donde combina su experiencia académica e investigativa con el liderazgo de proyectos orientados al fortalecimiento de los procesos comunicativos y al impacto social de la comunicación en la región.`
     },
     alix: {
       img: 'Gallery/Martin-Photoroom.png',
@@ -134,6 +134,7 @@ function fillPopup(cardOrPerson) {
     mailLink.href = '#';
   }
 }
+
 
 
 
