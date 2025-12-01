@@ -1,25 +1,40 @@
-.oma-logo {
-  position: static; /* la <a> controla la posición */
-  width: 120px;
-  display: block;
-  pointer-events: none; /* clics se detectan en el enlace */
+:root{
+  --color-1: #1D1D1B;
+  --text-color: #f0f0f0;
+  --accent-color: #ffffff;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-family: "JetBrains Mono", monospace;
+  scroll-padding-top: 0;
 }
 
-.oma-logo-link {
+body { 
+  margin: 0;
+  padding: 0;
+}
+
+/* OVERLAY NEGRO FULLSCREEN */
+.overlay-negro {
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1001;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 0;
-  background: transparent;
-  cursor: pointer;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  z-index: 1;
+  pointer-events: none;
 }
-p{
-  font-zise:16px;
+
+.oma-logo {
+  position: static;
+  width: 120px;
+  display: block;
+  pointer-events: auto;
 }
 
 .oma-logo-bar {
@@ -38,28 +53,13 @@ p{
   height: 60px;
 }
 
-:root{
-  --color-1: #1D1D1B;
-  --text-color: #f0f0f0;
-  --accent-color: #ffffff;
+p{
+  font-size:16px;
 }
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html{
-font-family: "JetBrains Mono", monospace;
-}
-
-/* Ensure the browser doesn't snap content under the fixed header when reloading or navigating to anchors */
-html { scroll-padding-top: 130px; }
-/* Add top padding to body so the first section is not hidden under fixed header */
-body { padding-top: 130px; }
 
 nav {
   position: fixed;
-  top: 54px; /* ajusta según el alto de .oma-logo-bar */
+  top: 60px;
   left: 0;
   width: 100%;
   height: 70px;
@@ -75,8 +75,9 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-    justify-content: center;
+  justify-content: center;
 }
+
 nav a{
   padding: 16px 20px;
   display: flex;
@@ -85,34 +86,39 @@ nav a{
   color: var(--text-color);
   font-size: 12px;
 }
+
 nav a:hover{
   background-color: var(--accent-color);
   color: #000;
   border-radius: 4px;
   transition: background 0.2s, color 0.2s;
-
 }
 
 nav svg{
   fill: var(--text-color);
 }
+
 #sidebar-active{
   display: none;
 }
+
 .open-sidebar-button, .close-sidebar-button{
   display: none;
 }
+
+.sidebar-overlay-bg {
+  display: none;
+}
+
 @media(max-width: 450px){
   .links-container{
     flex-direction: column;
     align-items: flex-start;
-
     position: fixed;
-    top: 0;
+    top: 130px;
     right: -100%;
-    z-index: 10;
+    z-index: 998;
     width: 300px;
-
     background-color: var(--color-1);
     box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
     transition: 0.75s ease-out;
@@ -131,14 +137,16 @@ nav svg{
   #sidebar-active:checked ~ .links-container{
     right: 0;
   }
-  #sidebar-active:checked ~ #overlay{
+  #sidebar-active:checked ~ .sidebar-overlay-bg{
     height: 100%;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9;
-}
+    z-index: 997;
+    display: block;
+    background: rgba(0,0,0,0.5);
+  }
 }
 
 .sobre-nosotros {
@@ -148,7 +156,8 @@ nav svg{
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 120px 0;
+  padding: 80px 0 120px 0;
+  margin-top: 0;
 }
 
 .sobre-grid {
@@ -200,8 +209,8 @@ nav svg{
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-right: 32px; /* Espacio a la derecha */
-  padding-left: 32px;  /* Espacio a la izquierda, si lo necesitas */
+  padding-right: 32px;
+  padding-left: 32px;
   box-sizing: border-box;
 }
 
@@ -231,7 +240,7 @@ nav svg{
 .footer {
   background: #1D1D1B;
   color: #fff;
-  padding: 48px 0 32px 0;;
+  padding: 48px 0 32px 0;
   width: 100vw;
   box-sizing: border-box;
   font-family: inherit;
@@ -255,7 +264,6 @@ nav svg{
 }
 
 .footer-logo {
-
   width: 60px;
   height: 21px;
   object-fit: contain;
@@ -333,7 +341,6 @@ nav svg{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: 0 auto; 
 }
 
 .footer-menu a {
@@ -342,7 +349,6 @@ nav svg{
   margin: 0 0px;
   font-size: 12px;
   transition: text-decoration 0.2s;
-
 }
 
 .footer-menu a:hover {
@@ -351,7 +357,7 @@ nav svg{
 
 .footer-menu span {
   color: #afafab;
-  margin:0  3.5px;
+  margin: 0 3.5px;
 }
 
 .footer-bottom {
@@ -388,5 +394,6 @@ nav svg{
   .footer-menu, .footer-bottom {
     max-width: 94vw;
   }
-
 }
+
+
